@@ -4779,7 +4779,8 @@ a div {
 .dribsection .container .dribcontent .dribcards .centereditems .card:nth-child(3):before {
   content: "PRO";
   position: absolute;
-  left: 335px;
+  left: 150px;
+    font-family: "Rubik", sans-serif;
   top: 25px;
   font-size: 25px;
   background-color: rgb(149, 149, 255);
@@ -4789,6 +4790,7 @@ a div {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  color
 }
 
 /* Shots */
