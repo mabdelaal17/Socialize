@@ -4781,6 +4781,7 @@ a div {
   position: absolute;
   left: 150px;
   font-family: "Rubik", sans-serif;
+  color: var(--main-color);
   top: 25px;
   font-size: 25px;
   background-color: rgb(149, 149, 255);
