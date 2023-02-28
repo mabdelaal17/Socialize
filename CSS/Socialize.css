@@ -1,0 +1,5838 @@
+/* Start Global Values */
+body {
+  margin: 0;
+  background-color: #292826;
+  font-family: "Rubik", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --main-color: #292826;
+  --main-color-alt: #f9d342;
+  --main-transition: 0.3s;
+  --main-font-size: 80px;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--main-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-color-alt);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color-alt);
+}
+
+
+
+/* Rocket Image  */
+div.rocketimage img {
+  width: 200px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.2;
+}
+
+/* Astro Image  */
+.snapsection .container {
+  position: relative;
+}
+
+.snapsection .container .astroimage img {
+  width: 200px;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  opacity: 0.2;
+}
+
+/* End Global Values */
+/* Start Header */
+.header {
+  padding: 10px 0px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+ul.nav-links {
+  margin-left: 150px;
+}
+
+ul.nav-links li {
+  display: inline-block;
+  margin-left: 25px;
+  position: relative;
+}
+
+ul.nav-links li::after {
+  content: "";
+  background-color: var(--main-color-alt);
+  width: 5px;
+  height: 3px;
+  border-radius: 5px;
+  position: absolute;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  top: 50%;
+  margin-top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+ul.nav-links li:hover::after {
+  width: 100%;
+  opacity: 100%;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+ul.nav-links li a {
+  color: white;
+  font-size: 18px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+ul.nav-links li a:hover {
+  cursor: pointer;
+  color: var(--main-color-alt);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.inputbox {
+  position: relative;
+  width: 196px;
+}
+
+.inputbox input {
+  position: relative;
+  width: 100%;
+  padding: 10px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: var(--main-color);
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.inputbox span {
+  position: absolute;
+  left: 0;
+  padding: 15px 10px 10px;
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 00.05em;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.inputbox input:valid~span,
+.inputbox input:focus~span {
+  display: none;
+}
+
+.inputbox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--main-color-alt);
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputbox input:valid~i,
+.inputbox input:focus~i {
+  height: 40px;
+}
+
+/* End Header */
+/* Start Landing Page */
+.landing-page {
+  position: relative;
+}
+
+.landing-page .container {
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  margin: 0 auto 100px;
+}
+
+.details-text {
+  flex: 1;
+  margin-left: 50px;
+}
+
+.details-text h1 {
+  color: var(--main-color-alt);
+  font-size: var(--main-font-size);
+  font-weight: bolder;
+  margin: 0px;
+  padding: 0px;
+}
+
+.details-text p {
+  color: #f6f6f6;
+  font-size: 20px;
+  letter-spacing: 0.7px;
+  margin: 0 0 2px;
+}
+
+.details-text span {
+  color: #ccc;
+  font-size: 12px;
+  letter-spacing: 0.7px;
+  margin: 0;
+}
+
+.buttons {
+  margin-top: 8px;
+  display: flex;
+  max-width: 300px;
+  justify-content: space-evenly;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: var(--main-color-alt);
+  color: ghostwhite;
+}
+
+button span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+button:hover span {
+  color: var(--main-color);
+}
+
+button::before,
+button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+button::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.landp-ill {
+  height: 450px;
+  right: 0px;
+  position: relative;
+}
+
+/* End Landing Page */
+/* Start Explorer Sticky Bar */
+.sticky .container .stickyhome {
+  position: fixed;
+  margin-top: 150px;
+  background-color: white;
+  width: 75px;
+  height: 75px;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  z-index: 100;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  box-shadow: 1px 1px 10px white, -1px -1px 10px white;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+.sticky .container .stickyhome a {
+  color: black;
+  font-size: 25px;
+  padding: 15px;
+}
+
+.sticky .container .stickyhome:hover {
+  cursor: pointer;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  opacity: 1;
+}
+
+/* End Explorer Sticky Bar */
+/* Start Social Websites Icons */
+.social-media .container {
+  position: relative;
+  height: 500px;
+  width: 1140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color-alt);
+}
+
+.shapes1 {
+  width: 1140px;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.flip {
+  width: 1140px;
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: rotateX(180deg) translate(-50%, -50%);
+  -webkit-transform: rotateX(180deg) translate(-50%, -50%);
+  -moz-transform: rotateX(180deg) translate(-50%, -50%);
+  -ms-transform: rotateX(180deg) translate(-50%, -50%);
+  -o-transform: rotateX(180deg) translate(-50%, -50%);
+  z-index: -1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.group1,
+.group2,
+.group3 {
+  display: flex;
+  margin: 10px auto 10px;
+  position: relative;
+}
+
+.group1 div,
+.group2 div,
+.group3 div {
+  display: flex;
+  flex-direction: column;
+  margin: auto 50px;
+  align-items: center;
+}
+
+a div {
+  color: var(--main-color);
+}
+
+.group1 div:hover,
+.group2 div:hover,
+.group3 div:hover {
+  cursor: pointer;
+}
+
+.group1 div::after {
+  content: "";
+  background-color: var(--main-color);
+  width: 5px;
+  height: 5px;
+  bottom: 0px;
+  border-radius: 5px;
+  position: absolute;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.group2 div::after {
+  content: "";
+  background-color: var(--main-color);
+  width: 5px;
+  height: 5px;
+  bottom: 0px;
+  border-radius: 5px;
+  position: absolute;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.group3 div::after {
+  content: "";
+  background-color: var(--main-color);
+  width: 5px;
+  height: 5px;
+  bottom: 0px;
+  border-radius: 5px;
+  position: absolute;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.group1 div:hover::after,
+.group2 div:hover::after,
+.group3 div:hover::after {
+  width: 25px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.group1 div p,
+.group2 div p,
+.group3 div p {
+  font-size: 18px;
+  font-weight: 450;
+}
+
+/* End Social Websites Icons */
+/* Div Spacing */
+.clear {
+  height: 250px;
+}
+
+.clear1 {
+  height: 150px;
+}
+
+/* Ads Image */
+.container .adimage {
+  position: relative;
+  width: 800px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+/* Facebook */
+.fbsection .container .fbcontent .fbhead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.fbsection .container .fbcontent .fbhead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.fbsection .container .fbcontent .fbhead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.fbsection .container .fbcontent .fbhead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.fbsection .container .fbcontent .fbhead i {
+  color: var(--main-color-alt);
+}
+
+.fbcontent {
+  color: white;
+  padding: 25px;
+}
+
+.fbsection .container .fbcontent .fbcards {
+  display: flex;
+  justify-content: center;
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+/* Star icon */
+.fbsection .container .fbcontent .fbcards .centereditems .card {
+  position: relative;
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card::before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* Profile Photo */
+.fbsection .container .fbcontent .fbcards .centereditems .card .circle {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .circle:hover span {
+  display: none;
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .circle::after {
+  content: "Upload Square Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .circle:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Landscape */
+.fbsection .container .fbcontent .fbcards .centereditems .card .landscape {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 167px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .landscape:hover span {
+  display: none;
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .landscape::after {
+  content: "640×315px smartphone size";
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 167px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .landscape:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Post */
+.fbsection .container .fbcontent .fbcards .centereditems .card .post {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 236px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .post:hover span {
+  display: none;
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .post::after {
+  content: "1200×628px for shared image link";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 236px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .post:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Group */
+.fbsection .container .fbcontent .fbcards .centereditems .card .group {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 236px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .group:hover span {
+  display: none;
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .group::after {
+  content: "1200×628px for event cover (Minimum group cover)";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 236px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .group:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Stories */
+.fbsection .container .fbcontent .fbcards .centereditems .card .stories {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .stories:hover span {
+  display: none;
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .stories::after {
+  content: "Leave 14% of the top and bottom without text (i.e 250px)";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .stories:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Ads */
+.fbsection .container .fbcontent .fbcards .centereditems .card .ads {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .ads:hover h6+span {
+  display: none;
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .ads::after {
+  content: "For Most of Ads";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.fbsection .container .fbcontent .fbcards .centereditems .card .ads:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Youtube */
+.youtsection .container .youtcontent .youthead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.youtsection .container .youtcontent .youthead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.youtsection .container .youtcontent .youthead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.youtsection .container .youtcontent .youthead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.youtsection .container .youtcontent .youthead i {
+  color: var(--main-color-alt);
+}
+
+.youtcontent {
+  color: white;
+  padding: 25px;
+}
+
+.youtsection .container .youtcontent .youtcards {
+  display: flex;
+  justify-content: center;
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card:last-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.yads1,
+.yads2 {
+  margin-right: 25px;
+}
+
+.yads1,
+.yads2,
+.yads3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .yadscontainer h6 {
+  margin: 0;
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+/* Star icon */
+.youtsection .container .youtcontent .youtcards .centereditems .card {
+  position: relative;
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card:not(:last-child):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* Profile Photo */
+.youtsection .container .youtcontent .youtcards .centereditems .card .circle {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .circle:hover span {
+  display: none;
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .circle::after {
+  content: "Upload Square Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .circle:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Landscape */
+.youtsection .container .youtcontent .youtcards .centereditems .card .landscape {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 253px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .landscape:hover span {
+  display: none;
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .landscape::after {
+  content: "1235×338 smartphone size";
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 253px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .landscape:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Thumbnail */
+.youtsection .container .youtcontent .youtcards .centereditems .card .thumbnail {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 253px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .thumbnail:hover span {
+  display: none;
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .thumbnail::after {
+  content: "JPG/PNG | 16:9 | Max 2 MB";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 253px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .thumbnail:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Group */
+.youtsection .container .youtcontent .youtcards .centereditems .card .watermark {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .watermark:hover span {
+  display: none;
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .watermark::after {
+  content: "Square | Max 1 MB";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .watermark:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Ads */
+.youtsection .container .youtcontent .youtcards .centereditems .card .yadscontainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .yadscontainer .yadsflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .yadscontainer .yads1 {
+  background-color: transparent;
+  position: relative;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .yadscontainer .yads1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 300px;
+  height: 250px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .yadscontainer .yads1:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .yadscontainer .yads2 {
+  background-color: transparent;
+  position: relative;
+  width: 300px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .yadscontainer .yads2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 300px;
+  height: 60px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .yadscontainer .yads2:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .yadscontainer .yads3 {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin-bottom: 50px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .yadscontainer .yads3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 66px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.youtsection .container .youtcontent .youtcards .centereditems .card .yadscontainer .yads3:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Twitter */
+.twittersection .container .twittercontent .twitterhead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.twittersection .container .twittercontent .twitterhead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.twittersection .container .twittercontent .twitterhead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .twiadscontainer h6 {
+  margin: 0px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.twittersection .container .twittercontent .twitterhead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.twittersection .container .twittercontent .twitterhead i {
+  color: var(--main-color-alt);
+}
+
+.twittercontent {
+  color: white;
+  padding: 25px;
+}
+
+.twittersection .container .twittercontent .twittercards {
+  display: flex;
+  justify-content: center;
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card:nth-child(5) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .twiadscontainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.twiads1,
+.twiads2 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Star icon */
+.twittersection .container .twittercontent .twittercards .centereditems .card {
+  position: relative;
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card:not(.not):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* Profile Photo */
+.twittersection .container .twittercontent .twittercards .centereditems .card .circle {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .circle:hover span {
+  display: none;
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .circle::after {
+  content: "Upload Square Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .circle:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Landscape */
+.twittersection .container .twittercontent .twittercards .centereditems .card .landscape {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Stream */
+.twittersection .container .twittercontent .twittercards .centereditems .card .stream {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 253px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Twitter Card */
+.twittersection .container .twittercontent .twittercards .centereditems .card .twicard {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .twicard:hover span {
+  display: none;
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .twicard::after {
+  content: "Square Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .twicard:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Stories */
+.twittersection .container .twittercontent .twittercards .centereditems .card .stories {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .stories:hover span {
+  display: none;
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .stories::after {
+  content: "Leave 14% of the top and bottom without text (i.e 250px)";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .stories:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Ads */
+.twittersection .container .twittercontent .twittercards .centereditems .card .twiads1 {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 113px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .twiads2 {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Fleets */
+.twittersection .container .twittercontent .twittercards .centereditems .card .fleets {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .fleets:hover span {
+  display: none;
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .fleets::after {
+  content: "JPG/PNG | MP4 | Max 2 mins";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.twittersection .container .twittercontent .twittercards .centereditems .card .fleets:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Instagram */
+.instasection .container .instacontent .instahead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.instasection .container .instacontent .instahead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.instasection .container .instacontent .instahead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+.instasection .container .instacontent .instacards .centereditems .insadscontainer h6 {
+  margin: 0px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.instasection .container .instacontent .instahead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.instasection .container .instacontent .instahead i {
+  color: var(--main-color-alt);
+}
+
+.instacontent {
+  color: white;
+  padding: 25px;
+}
+
+.instasection .container .instacontent .instacards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.instasection .container .instacontent .instacards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+.instasection .container .instacontent .instacards .centereditems .card:last-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.insads1,
+.insads2,
+.insads3 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Star icon */
+.instasection .container .instacontent .instacards .centereditems .card {
+  position: relative;
+}
+
+.instasection .container .instacontent .instacards .centereditems .card:not(.not):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* Profile Photo */
+.instasection .container .instacontent .instacards .centereditems .card .circle {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .circle:hover span {
+  display: none;
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .circle::after {
+  content: "Upload Square Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .circle:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* IGTV */
+.instasection .container .instacontent .instacards .centereditems .card .igtv {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .igtv:hover span {
+  display: none;
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .igtv::after {
+  content: "9:16 | 15 sec to 10 min | Max 3.6 GB | Cover 420×654px";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 253px;
+  height: 450px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .igtv:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Stories */
+.instasection .container .instacontent .instacards .centereditems .card .insstories {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .insstories:hover span {
+  display: none;
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .insstories::after {
+  content: "9:16 | to 15 sec";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .insstories:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Reels */
+.instasection .container .instacontent .instacards .centereditems .card .insreels {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .insreels:hover span {
+  display: none;
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .insreels::after {
+  content: "9:16 | to 60 sec | Max 20 MB";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .insreels:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Ads */
+.instasection .container .instacontent .instacards .centereditems .card .insadscontainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .insads1 {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .insads2 {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 338px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.instasection .container .instacontent .instacards .centereditems .card .insads3 {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Snapchat */
+.snapsection .container .snapcontent .snaphead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.snapsection .container .snapcontent .snaphead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.snapsection .container .snapcontent .snaphead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+.snapsection .container .snapcontent .snapcards .centereditems .insadscontainer h6 {
+  margin: 0px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.snapsection .container .snapcontent .snaphead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.snapsection .container .snapcontent .snaphead i {
+  color: var(--main-color-alt);
+}
+
+.snapcontent {
+  color: white;
+  padding: 25px;
+}
+
+.snapsection .container .snapcontent .snapcards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.snapsection .container .snapcontent .snapcards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+/* Star icon */
+.snapsection .container .snapcontent .snapcards .centereditems .card {
+  position: relative;
+}
+
+.snapsection .container .snapcontent .snapcards .centereditems .card:not(.not):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* Image */
+.snapsection .container .snapcontent .snapcards .centereditems .card .snapimage {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Video */
+.snapsection .container .snapcontent .snapcards .centereditems .card .snapvideo {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Behance */
+.besection {
+  position: relative;
+}
+
+.besection::after {
+  content: "\f0c2";
+  color: white;
+  font-size: 100px;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  top: -50px;
+  left: 25px;
+  position: absolute;
+  opacity: 0.1;
+}
+
+.besection::before {
+  content: "\f0c2";
+  color: white;
+  font-size: 250px;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  top: -100px;
+  right: 25px;
+  position: absolute;
+  opacity: 0.1;
+}
+
+.besection .container .becontent .behead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.besection .container .becontent .behead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.besection .container .becontent .behead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+.besection .container .becontent .becards .centereditems .insadscontainer h6 {
+  margin: 0px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.besection .container .becontent .behead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.besection .container .becontent .behead i {
+  color: var(--main-color-alt);
+}
+
+.becontent {
+  color: white;
+  padding: 25px;
+}
+
+.besection .container .becontent .becards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.besection .container .becontent .becards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+/* Star icon */
+.besection .container .becontent .becards .centereditems .card {
+  position: relative;
+}
+
+.besection .container .becontent .becards .centereditems .card:not(.not):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+.besection .container .becontent .becards .centereditems .card .becontainer {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+.besection .container .becontent .becards .centereditems .becontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Profile Photo */
+.besection .container .becontent .becards .centereditems .card .circle {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.besection .container .becontent .becards .centereditems .card .circle:hover span {
+  display: none;
+}
+
+.besection .container .becontent .becards .centereditems .card .circle::after {
+  content: "Upload Square Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.besection .container .becontent .becards .centereditems .card .circle:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Banner */
+.besection .container .becontent .becards .centereditems .card .banner {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Behance Cover */
+.besection .container .becontent .becards .centereditems .card .cover {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 352px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Case */
+.besection .container .becontent .becards .centereditems .card .case {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.besection .container .becontent .becards .centereditems .card .case:hover span {
+  display: none;
+}
+
+.besection .container .becontent .becards .centereditems .card .case::after {
+  content: "JPEG, PNG, GIF | Cut the layout into parts, so it loads faster";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 253px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.besection .container .becontent .becards .centereditems .card .case:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* TikTok */
+.tiksection .container .tikcontent .tikhead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.tiksection .container .tikcontent .tikhead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.tiksection .container .tikcontent .tikhead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+.tiksection .container .tikcontent .tikcards .centereditems .insadscontainer h6 {
+  margin: 0px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.tiksection .container .tikcontent .tikhead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.tiksection .container .tikcontent .tikhead i {
+  color: var(--main-color-alt);
+}
+
+.tikcontent {
+  color: white;
+  padding: 25px;
+}
+
+.tiksection .container .tikcontent .tikcards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tiksection .container .tikcontent .tikcards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+/* Star icon */
+.tiksection .container .tikcontent .tikcards .centereditems .card {
+  position: relative;
+}
+
+.tiksection .container .tikcontent .tikcards .centereditems .card:not(.not):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* Profile Photo */
+.tiksection .container .tikcontent .tikcards .centereditems .card .circle {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.tiksection .container .tikcontent .tikcards .centereditems .card .circle:hover span {
+  display: none;
+}
+
+.tiksection .container .tikcontent .tikcards .centereditems .card .circle::after {
+  content: "Upload Square Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.tiksection .container .tikcontent .tikcards .centereditems .card .circle:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Image */
+.tiksection .container .tikcontent .tikcards .centereditems .card .tikimage {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Video */
+.tiksection .container .tikcontent .tikcards .centereditems .card .tikvideo {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.tiksection .container .tikcontent .tikcards .centereditems .card .tikvideo:hover span {
+  display: none;
+}
+
+.tiksection .container .tikcontent .tikcards .centereditems .card .tikvideo::after {
+  content: "Max. length 60 seconds";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 250px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.tiksection .container .tikcontent .tikcards .centereditems .card .tikvideo:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Whatsapp */
+.wappsection .container .wappcontent .wapphead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.wappsection .container .wappcontent .wapphead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.wappsection .container .wappcontent .wapphead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+.wappsection .container .wappcontent .wappcards .centereditems .insadscontainer h6 {
+  margin: 0px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.wappsection .container .wappcontent .wapphead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.wappsection .container .wappcontent .wapphead i {
+  color: var(--main-color-alt);
+}
+
+.wappcontent {
+  color: white;
+  padding: 25px;
+}
+
+.wappsection .container .wappcontent .wappcards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.wappsection .container .wappcontent .wappcards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+/* Star icon */
+.wappsection .container .wappcontent .wappcards .centereditems .card {
+  position: relative;
+}
+
+.wappsection .container .wappcontent .wappcards .centereditems .card:not(.not):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* Profile Photo */
+.wappsection .container .wappcontent .wappcards .centereditems .card .circle {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.wappsection .container .wappcontent .wappcards .centereditems .card .circle:hover span {
+  display: none;
+}
+
+.wappsection .container .wappcontent .wappcards .centereditems .card .circle::after {
+  content: "Upload Square Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.wappsection .container .wappcontent .wappcards .centereditems .card .circle:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Pinterest */
+.pinsection .container .pincontent .pinhead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.pinsection .container .pincontent .pinhead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.pinsection .container .pincontent .pinhead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.pinsection .container .pincontent .pinhead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.pinsection .container .pincontent .pinhead i {
+  color: var(--main-color-alt);
+}
+
+.pincontent {
+  color: white;
+  padding: 25px;
+}
+
+.pinsection .container .pincontent .pincards {
+  display: flex;
+  justify-content: center;
+}
+
+.pinsection .container .pincontent .pincards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card:last-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.pin1,
+.pin2,
+.pin3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pinsection .container .pincontent .pincards .centereditems .pinscon h6 {
+  margin: 0;
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+.pinsection .container .pincontent .pincards .centereditems .pinscon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pinsection .container .pincontent .pincards .centereditems .pinmidgrid {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.pinsection .container .pincontent .pincards .centereditems .pinmidgrid {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Star icon */
+.pinsection .container .pincontent .pincards .centereditems .card {
+  position: relative;
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card:not(.not):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* Profile Photo */
+.pinsection .container .pincontent .pincards .centereditems .card .circle {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .circle:hover span {
+  display: none;
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .circle::after {
+  content: "Upload Square Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .circle:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Landscape */
+.pinsection .container .pincontent .pincards .centereditems .card .landscape {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 253px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Pins */
+.pinsection .container .pincontent .pincards .centereditems .card .pins {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .pins:hover span {
+  display: none;
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .pins::after {
+  content: "Recommended Size | 1:1 or 2:3 | Max 20 MB";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .pins:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Infographic Pins */
+.pinsection .container .pincontent .pincards .centereditems .card .infographic {
+  background-color: transparent;
+  position: relative;
+  width: 150px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .infographic:hover span {
+  display: none;
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .infographic::after {
+  content: "9:16 | Max 20 MB | 1-16 sec long | 100 MB for video";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 150px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .infographic:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Stories */
+.pinsection .container .pincontent .pincards .centereditems .card .pinstories {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .pinstories:hover span {
+  display: none;
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .pinstories::after {
+  content: "1:3 | Max 20 MB";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .pinstories:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Ads */
+.pinsection .container .pincontent .pincards .centereditems .card .pinscon .pin1 {
+  background-color: transparent;
+  position: relative;
+  width: 300px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .pinscon .pin2 {
+  background-color: transparent;
+  position: relative;
+  width: 300px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.pinsection .container .pincontent .pincards .centereditems .card .pinscon .pin3 {
+  background-color: transparent;
+  position: relative;
+  width: 300px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Twitch */
+.twitchsection .container .twitchcontent .twitchhead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.twitchsection .container .twitchcontent .twitchhead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.twitchsection .container .twitchcontent .twitchhead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+.twitchsection .container .twitchcontent .twitchcards .centereditems .insadscontainer h6 {
+  margin: 0px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.twitchsection .container .twitchcontent .twitchhead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.twitchsection .container .twitchcontent .twitchhead i {
+  color: var(--main-color-alt);
+}
+
+.twitchcontent {
+  color: white;
+  padding: 25px;
+}
+
+.twitchsection .container .twitchcontent .twitchcards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.twitchsection .container .twitchcontent .twitchcards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+/* Star icon */
+.twitchsection .container .twitchcontent .twitchcards .centereditems .card {
+  position: relative;
+}
+
+.twitchsection .container .twitchcontent .twitchcards .centereditems .card:not(.not):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* Profile Avatar */
+.twitchsection .container .twitchcontent .twitchcards .centereditems .card .twitchimage {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Cover */
+.twitchsection .container .twitchcontent .twitchcards .centereditems .card .twitchcover {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Video Player Banner */
+.twitchsection .container .twitchcontent .twitchcards .centereditems .card .twitchvpb {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 253px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Info Panels */
+.twitchsection .container .twitchcontent .twitchcards .centereditems .card .twitchpanels {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 281px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* LinedIn */
+.linsection .container .lincontent .linhead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.linsection .container .lincontent .linhead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.linsection .container .lincontent .linhead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.linsection .container .lincontent .linhead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.linsection .container .lincontent .linhead i {
+  color: var(--main-color-alt);
+}
+
+.lincontent {
+  color: white;
+  padding: 25px;
+}
+
+.linsection .container .lincontent .lincards {
+  display: flex;
+  justify-content: center;
+}
+
+.linsection .container .lincontent .lincards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.linsection .container .lincontent .lincards .centereditems .card:last-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.linsection .container .lincontent .lincards .centereditems .card:nth-child(5) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.lin1,
+.lin2 {
+  margin-right: 25px;
+}
+
+.link4,
+.link5,
+.link6,
+.link7,
+.link8 {
+  margin-right: 25px;
+}
+
+.linsection .container .lincontent .lincards .centereditems .lincontainer div>h6 {
+  margin: 0;
+  text-align: center;
+}
+
+.linsection .container .lincontent .lincards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+/* Star icon */
+.linsection .container .lincontent .lincards .centereditems .card {
+  position: relative;
+}
+
+.linsection .container .lincontent .lincards .centereditems .card:not(.not):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* Profile Photo */
+.linsection .container .lincontent .lincards .centereditems .card .circle {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .circle:hover span {
+  display: none;
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .circle::after {
+  content: "Upload Square Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .circle:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Profile Cover */
+.linsection .container .lincontent .lincards .centereditems .card .lincoverp {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .lincoverp:hover span {
+  display: none;
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .lincoverp::after {
+  content: "4:1 | Max 8 MB";
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .lincoverp:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Blog Post */
+.linsection .container .lincontent .lincards .centereditems .card .linblogp {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Blog Post */
+.linsection .container .lincontent .lincards .centereditems .card .linstories {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 253px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Ads */
+.linsection .container .lincontent .lincards .centereditems .card .lincontainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .lincontainer .lin1 {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .lincontainer .lin2 {
+  background-color: transparent;
+  position: relative;
+  width: 300px;
+  height: 250px;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  text-align: center;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .lincontainer .lin3 {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 253px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin-bottom: 50px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Company Page */
+.linsection .container .lincontent .lincards .centereditems .card .lincontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .lincontainer div {
+  margin-bottom: 25px;
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .lincontainer .lin4 {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .lincontainer .lin5 {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  text-align: center;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .lincontainer .lin6 {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 253px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin-bottom: 50px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .lincontainer .lin7 {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.linsection .container .lincontent .lincards .centereditems .card .lincontainer .lin8 {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  text-align: center;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+/* Dribble */
+.dribsection .container .dribcontent .dribhead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.dribsection .container .dribcontent .dribhead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.dribsection .container .dribcontent .dribhead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .insadscontainer h6 {
+  margin: 0px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.dribsection .container .dribcontent .dribhead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.dribsection .container .dribcontent .dribhead i {
+  color: var(--main-color-alt);
+}
+
+.dribcontent {
+  color: white;
+  padding: 25px;
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+/* Star icon */
+.dribsection .container .dribcontent .dribcards .centereditems .card {
+  position: relative;
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card:not(.not):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* Profile Photo */
+.dribsection .container .dribcontent .dribcards .centereditems .card .circle {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card .circle:hover span {
+  display: none;
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card .circle::after {
+  content: "Upload Square Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card .circle:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Video Shots */
+.dribsection .container .dribcontent .dribcards .centereditems .card .dribvs {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 338px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card .dribvs:hover span {
+  display: none;
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card .dribvs::after {
+  content: "4:3 | Max 20 MB | MP4 | 24 sec";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 338px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card .dribvs:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Masthead PRO */
+.dribsection .container .dribcontent .dribcards .centereditems .card .dribMPRO {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 338px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card .dribMPRO:hover span {
+  display: none;
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card .dribMPRO::after {
+  content: "4:3 | Max 5 MB | JPG,PNG";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 338px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card .dribMPRO:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card:nth-child(3):before {
+  content: "PRO";
+  position: absolute;
+  left: 335px;
+  top: 25px;
+  font-size: 25px;
+  background-color: rgb(149, 149, 255);
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/* Shots */
+.dribsection .container .dribcontent .dribcards .centereditems .card .dribshots {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 338px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card .dribshots:hover span {
+  display: none;
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card .dribshots::after {
+  content: "4:3 | Max 10 MB | JPG,PNG";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 338px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.dribsection .container .dribcontent .dribcards .centereditems .card .dribshots:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* AppStore */
+.appsection .container .appcontent .apphead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.appsection .container .appcontent .apphead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.appsection .container .appcontent .apphead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+.appsection .container .appcontent .appcards .centereditems .insadscontainer h6 {
+  margin: 0px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.appsection .container .appcontent .apphead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.appsection .container .appcontent .apphead i {
+  color: var(--main-color-alt);
+}
+
+.appcontent {
+  color: white;
+  padding: 25px;
+}
+
+.appsection .container .appcontent .appcards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.appsection .container .appcontent .appcards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+/* Star icon */
+.appsection .container .appcontent .appcards .centereditems .card {
+  position: relative;
+}
+
+.appsection .container .appcontent .appcards .centereditems .card:not(.not):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* 5.5" */
+.appsection .container .appcontent .appcards .centereditems .card .app56 {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.appsection .container .appcontent .appcards .centereditems .card .app56:hover span {
+  display: none;
+}
+
+.appsection .container .appcontent .appcards .centereditems .card .app56::after {
+  content: "iPhone 8 Plus, iPhone 7 Plus, iPhone 6s Plus | 2208×1242px for landscape";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 253px;
+  height: 450px;
+  display: flex;
+  line-height: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.appsection .container .appcontent .appcards .centereditems .card .app56:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* 5.6" */
+.appsection .container .appcontent .appcards .centereditems .card .app65 {
+  background-color: transparent;
+  position: relative;
+  width: 208px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.appsection .container .appcontent .appcards .centereditems .card .app65:hover span {
+  display: none;
+}
+
+.appsection .container .appcontent .appcards .centereditems .card .app65::after {
+  content: "iPhone 14 Plus, iPhone 13 Pro Max, iPhone 12 Pro Max | 2778×1284px for landscape";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 208px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.appsection .container .appcontent .appcards .centereditems .card .app65:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* ProductHunt */
+.prodhsection .container .prodhcontent .prodhhead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.prodhsection .container .prodhcontent .prodhhead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.prodhsection .container .prodhcontent .prodhhead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+.prodhsection .container .prodhcontent .prodhcards .centereditems .insadscontainer h6 {
+  margin: 0px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.prodhsection .container .prodhcontent .prodhhead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.prodhsection .container .prodhcontent .prodhhead i {
+  color: var(--main-color-alt);
+}
+
+.prodhcontent {
+  color: white;
+  padding: 25px;
+}
+
+.prodhsection .container .prodhcontent .prodhcards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.prodhsection .container .prodhcontent .prodhcards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+/* Star icon */
+.prodhsection .container .prodhcontent .prodhcards .centereditems .card {
+  position: relative;
+}
+
+.prodhsection .container .prodhcontent .prodhcards .centereditems .card:not(.not):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* 5.5" */
+.prodhsection .container .prodhcontent .prodhcards .centereditems .card .circle {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.prodhsection .container .prodhcontent .prodhcards .centereditems .card .circle:hover span {
+  display: none;
+}
+
+.prodhsection .container .prodhcontent .prodhcards .centereditems .card .circle::after {
+  content: "Upload Square Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  line-height: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.prodhsection .container .prodhcontent .prodhcards .centereditems .card .circle:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Gallery */
+.prodhsection .container .prodhcontent .prodhcards .centereditems .card .prodhgallery {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 255px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.prodhsection .container .prodhcontent .prodhcards .centereditems .card .prodhgallery:hover span {
+  display: none;
+}
+
+.prodhsection .container .prodhcontent .prodhcards .centereditems .card .prodhgallery::after {
+  content: "Max. 4 images can be uploaded.";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 255px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.prodhsection .container .prodhcontent .prodhcards .centereditems .card .prodhgallery:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Google Play */
+.gplaysection .container .gplaycontent .gplayhead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.gplaysection .container .gplaycontent .gplayhead::after {
+  content: "\f005ㅤHover on resolutions for more info";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  letter-spacing: 3px;
+  top: 105px;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  color: var(--main-color-alt);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.gplaysection .container .gplaycontent .gplayhead h2 {
+  font-size: var(--main-font-size);
+  margin: 0 0 0 15px;
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .insadscontainer h6 {
+  margin: 0px;
+}
+
+@keyframes angry {
+  25% {
+    margin-right: 30px;
+  }
+
+  50% {
+    margin-right: -30px;
+  }
+
+  75% {
+    margin-right: 30px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}
+
+.gplaysection .container .gplaycontent .gplayhead h2:hover {
+  cursor: default;
+  animation: angry 0.5s alternate;
+  -webkit-animation: angry 0.5s alternate;
+}
+
+.gplaysection .container .gplaycontent .gplayhead i {
+  color: var(--main-color-alt);
+}
+
+.gplaycontent {
+  color: white;
+  padding: 25px;
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  grid-gap: 3em 5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card h3 {
+  font-size: 30px;
+}
+
+/* Star icon */
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card {
+  position: relative;
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card:not(.not):before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  color: var(--main-color-alt);
+}
+
+/* Profile Photo */
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .circle {
+  background-color: transparent;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .circle:hover span {
+  display: none;
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .circle::after {
+  content: "32-bit PNG (with alpha). | Maximum file size: 1 mb";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .circle:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Feature Graphic */
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .gplayfg {
+  background-color: transparent;
+  position: relative;
+  width: 450px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .gplayfg:hover span {
+  display: none;
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .gplayfg::after {
+  content: "JPEG or 24-bit PNG (no alpha). Don't include any copy or important visual information near the borders of the asset - specifically near the bottom third of the frame. If adding text, use large font sizes. Your graphic may be displayed alone without the app icon.";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 450px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .gplayfg:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Screenshots 5" */
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .gplays5 {
+  background-color: transparent;
+  position: relative;
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .gplays5:hover span {
+  display: none;
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .gplays5::after {
+  content: "Pixel 3 and similar. JPEG or 24-bit PNG (no alpha).";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 253px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .gplays5:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Screenshots 6" */
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .gplays6 {
+  background-color: transparent;
+  position: relative;
+  width: 225px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--main-color-alt),
+    -4px -4px 10px var(--main-color-alt);
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .gplays6:hover span {
+  display: none;
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .gplays6::after {
+  content: "Pixel 3 XL and similar. JPEG or 24-bit PNG (no alpha).";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color-alt);
+  width: 225px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: var(--main-color-alt) 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  text-align: center;
+}
+
+.gplaysection .container .gplaycontent .gplaycards .centereditems .card .gplays6:hover::after {
+  opacity: 1;
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+/* Start Sizes & Details Section */
+/* Start Footer */
+.footer .container {
+  background-color: var(--main-color-alt);
+  border-radius: 10px 10px 0 0;
+  padding: 25px;
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+}
+
+.footer .container .information {
+  width: 300px;
+  text-align: center;
+}
+
+.footer .container .information h3 {
+  font-size: 15px;
+}
+
+.footer .container ul:nth-child(2) {
+  width: 200px;
+}
+
+.footer .container ul:nth-child(3) {
+  width: 100px;
+}
+
+.footer .container ul {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .container ul li {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.footer .container ul li a {
+  padding: 10px 15px;
+  color: var(--main-color);
+  font-size: 18px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.footer .container ul li a:hover {
+  margin-left: 15px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.footer .container img {
+  height: 150px;
+}
+
+/* End Footer */
+/* Mobile */
+@media (max-width: 768px) {
+  .container {
+    width: 350px;
+  }
+
+  .header .container .logo {
+    display: none;
+  }
+
+  .header .container .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+  }
+
+  .header .container .nav-links li a {
+    font-size: 12px;
+  }
+
+  .landing-page .container .landp-ill {
+    display: none;
+  }
+
+  .landing-page .container .details-text {
+    text-align: center;
+  }
+
+  .landing-page .container .details-text h1 {
+    font-size: 60px;
+  }
+
+  .landing-page .container .details-text p {
+    font-size: 15px;
+  }
+
+  .landing-page .container .details-text span {
+    font-size: 10px;
+  }
+
+  .header .container .inputbox {
+    display: none;
+  }
+
+  .social-media .container {
+    height: fit-content;
+    width: 375px;
+  }
+
+  .social-media .container .shapes1,
+  .flip {
+    width: 375px;
+  }
+
+  .shapes1 {
+    top: -27px;
+  }
+
+  .flip {
+    bottom: -27px;
+  }
+
+  .fa-5x {
+    font-size: 50px !important;
+  }
+
+  .group1,
+  .group2,
+  .group3 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 40px !important;
+  }
+
+  h3 {
+    font-size: 25px !important;
+  }
+
+  .centereditems {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .card:first-child {
+    margin-top: 25px;
+  }
+
+  ::after {
+    font-size: 7px !important;
+    text-align: center;
+    width: 300px;
+    top: 0px;
+  }
+
+  ::before {
+    left: 45px;
+  }
+}
