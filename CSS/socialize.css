@@ -80,6 +80,13 @@ a {
   -o-border-radius: 10px;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--main-color-alt);
@@ -251,6 +258,17 @@ ul.nav-links li a:hover {
   height: 40px;
 }
 
+@media (max-width: 767px) {
+  .inputbox {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+
 /* End Header */
 /* Start Landing Page */
 .landing-page {
@@ -346,6 +364,10 @@ button::before {
   left: -10%;
   transform: skew(30deg);
   transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  -webkit-transform: skew(30deg);
+  -moz-transform: skew(30deg);
+  -ms-transform: skew(30deg);
+  -o-transform: skew(30deg);
 }
 
 button:hover::before {
@@ -356,6 +378,23 @@ button:hover::before {
   height: 450px;
   right: 0px;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  .landp-ill {
+    display: none;
+  }
+
+  .details-text {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
 }
 
 /* End Landing Page */
@@ -407,6 +446,20 @@ button:hover::before {
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
   opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .details-text h1 {
+    font-size: 50px;
+  }
+
+  .details-text p {
+    font-size: 13px;
+  }
+
+  .details-text span {
+    font-size: 10px;
+  }
 }
 
 /* End Explorer Sticky Bar */
@@ -553,6 +606,51 @@ a div {
   font-size: 18px;
   font-weight: 450;
 }
+
+@media (max-width: 767px) {
+  .social-media .container {
+    width: 750px;
+    height: 1600px;
+  }
+
+  .shapes1,
+  .flip {
+    width: 750px;
+  }
+
+  .shapes1 {
+    top: -52px;
+  }
+
+  .flip {
+    bottom: -52px;
+  }
+
+  .social-media .container .content {
+    position: relative;
+  }
+
+  .group1,
+  .group2,
+  .group3 {
+    flex-direction: column;
+    margin: 0 0 0 0;
+  }
+
+  .group1 i,
+  .group2 i,
+  .group3 i {
+    font-size: 3em;
+
+  }
+
+  .group1 div,
+  .group2 div,
+  .group3 div {
+    margin: auto;
+  }
+}
+
 
 /* End Social Websites Icons */
 /* Div Spacing */
@@ -1667,6 +1765,10 @@ a div {
   margin: 0 0 0 15px;
 }
 
+.twittersection .container .twittercontent .twittercards .centereditems .twiadscontainer div:not(:first-child) {
+  margin-left: 50px;
+}
+
 .twittersection .container .twittercontent .twittercards .centereditems .twiadscontainer h6 {
   margin: 0px;
 }
@@ -2121,6 +2223,10 @@ a div {
 .instasection .container .instacontent .instahead h2 {
   font-size: var(--main-font-size);
   margin: 0 0 0 15px;
+}
+
+.instasection .container .instacontent .instacards .centereditems .insadscontainer div:not(:first-child) {
+  margin-left: 50px;
 }
 
 .instasection .container .instacontent .instacards .centereditems .insadscontainer h6 {
@@ -3459,6 +3565,11 @@ a div {
   align-items: center;
 }
 
+.pinsection .container .pincontent .pincards .centereditems .pinscon div:not(:first-child) {
+  margin-left: 50px;
+}
+
+
 .pinsection .container .pincontent .pincards .centereditems .pinscon h6 {
   margin: 0;
 }
@@ -4781,11 +4892,12 @@ a div {
 .dribsection .container .dribcontent .dribcards .centereditems .card:nth-child(3):before {
   content: "PRO";
   position: absolute;
-  left: 150px;
+  left: 330px;
   font-family: "Rubik", sans-serif;
   color: var(--main-color);
   top: 25px;
   font-size: 25px;
+  color: white;
   background-color: rgb(149, 149, 255);
   padding: 5px;
   border-radius: 5px;
@@ -4793,7 +4905,6 @@ a div {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  color
 }
 
 /* Shots */
