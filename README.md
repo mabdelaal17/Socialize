@@ -1,2 +1,2 @@
 # Socialize
-###Social Media Image Sizes
+##Social Media Image Sizes
